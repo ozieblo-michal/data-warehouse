@@ -108,9 +108,9 @@ time_table_create = ("""
 # STAGING TABLES #
 
 staging_events_copy = ("""
-                        copy staging_events from {}
-                        credentials 'aws_iam_role={}'
-                        compupdate off region 'us-west-2' FORMAT AS JSON {}
+                        COPY staging_events from {}
+                        CREDENTIALS 'aws_iam_role={}'
+                        COMPUPDATE off region 'us-west-2' FORMAT AS JSON {}
                         TIMEFORMAT as 'epochmillisecs'
                         TRUNCATECOLUMNS BLANKSASNULL EMPTYASNULL;
                     """).format(config['S3'].get('LOG_DATA'),
