@@ -16,10 +16,12 @@ The star schema has 1 fact table (songplays), and 4 dimension tables (artists, s
 
 ![](relationalschema.png)
 
-In this project is based on two Amazon Web Services: S3 (Data storage) and Redshift (Data warehouse with columnar storage).
+The project is based on two Amazon Web Services: S3 (Data storage) and Redshift (Data warehouse with columnar storage).
 
 Data sources are provided by two public S3 buckets:
+
 `Song data: s3://udacity-dend/song_data`
+
 `Log data: s3://udacity-dend/log_data`
 
 Song data bucket contains info about songs and artists. Log data bucket has info concerning actions done 
